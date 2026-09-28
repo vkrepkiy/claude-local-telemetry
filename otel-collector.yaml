@@ -1,0 +1,45 @@
+receivers:
+  otlp:
+    protocols:
+      http:
+        endpoint: 0.0.0.0:4318
+
+processors:
+  batch:
+    timeout: 1s
+
+exporters:
+  file/traces:
+    path: /data/traces.jsonl
+    format: json
+    append: true
+    flush_interval: 1s
+
+  file/logs:
+    path: /data/logs.jsonl
+    format: json
+    append: true
+    flush_interval: 1s
+
+  file/metrics:
+    path: /data/metrics.jsonl
+    format: json
+    append: true
+    flush_interval: 1s
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [file/traces]
+
+    logs:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [file/logs]
+
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [file/metrics]

@@ -1,0 +1,10 @@
+# collected/generated OTel data (raw traces, logs, metrics, CSV reports)
+otel-data/
+
+# Python
+__pycache__/
+*.pyc
+
+# editor/OS cruft
+.history/
+.DS_Store
