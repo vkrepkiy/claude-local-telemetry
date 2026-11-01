@@ -8,3 +8,14 @@ __pycache__/
 # editor/OS cruft
 .history/
 .DS_Store
+
+# vk: the repo-local skill install is committed, so a
+# cloud session on this repo has them without any setup.
+!.claude/
+.claude/*
+!.claude/skills/
+!.claude/scripts/
+!.claude/roles/
+!.claude/agents/
+!.claude/vk-version
+!.claude/vk-update.sh

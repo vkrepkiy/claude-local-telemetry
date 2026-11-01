@@ -1,0 +1,5 @@
+.claude/skills/vk-*/** linguist-generated=true
+.claude/scripts/** linguist-generated=true
+.claude/roles/** linguist-generated=true
+.claude/agents/vk-*.md linguist-generated=true
+.claude/skills/steward/** linguist-generated=true
